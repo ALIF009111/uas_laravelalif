@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dosenController;
+use App\Http\Controllers\pelangganController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -22,4 +22,9 @@ Route::get('/template', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//pelanggan
+Route::get('/pelanggan', [pelangganController::class, 'index']);
+Route::get('/pelanggan/tambah', [pelangganController::class, 'create']);
+Route::post('/pelanggan', [pelangganController::class, 'store']); 
 

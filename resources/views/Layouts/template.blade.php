@@ -7,6 +7,7 @@
   <title>@yield('title')</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('/assets/images/logos/pepe.png')}}" />
   <link rel="stylesheet" href="{{asset('/assets/css/styles.min.css')}}" />
+   <link rel="stylesheet" href="{{asset('/assets/css/all.css')}}">
 </head>
 
 <body>
@@ -100,7 +101,7 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+              <a class="sidebar-link primary-hover-bg" href="/pelanggan" aria-expanded="false">
                 <iconify-icon icon="solar:accessibility-line-duotone" class=""></iconify-icon>
                 <span class="hide-menu">Pelanggan</span>
               </a>
@@ -227,6 +228,7 @@
   <script src="{{asset('/assets/js/sidebarmenu.js')}}"></script>
   <script src="{{asset('/assets/js/app.min.js')}}"></script>
   <script src="{{asset('/assets/libs/simplebar/dist/simplebar.js')}}"></script>
+  <script src="{{asset('/assets/js/all.js')}}"></script>
   <!-- solar icons -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   {{-- <script src="{{ asset('/dist/js/demo.js')}}"></script> --}}

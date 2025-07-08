@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nm_pelanggan');
             $table->string('alamt_pelanggan');
             $table->string('noHp_pelanggan');
+            $table->timestamps();
         });
     }
 
