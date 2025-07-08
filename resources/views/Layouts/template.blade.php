@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spike Free Bootstrap Admin Template by WrapPixel</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/pepe.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <title>@yield('title')</title>
+  <link rel="shortcut icon" type="image/png" href="{{asset('/assets/images/logos/pepe.png')}}" />
+  <link rel="stylesheet" href="{{asset('/assets/css/styles.min.css')}}" />
 </head>
 
 <body>
@@ -16,29 +16,29 @@
 
     <!--  App Topstrip -->
     <div class="app-topstrip bg-dark py-6 px-3 w-100 d-lg-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center justify-content-center gap-5 mb-2 mb-lg-0">
-        <a class="d-flex justify-content-center" href="https://www.wrappixel.com/" target="_blank">
-          <img src="../assets/images/logos/logo-wrappixel.svg" alt="" width="150">
-        </a>
+        <div class="d-flex align-items-center justify-content-center gap-5 mb-2 mb-lg-0">
+          <a class="d-flex justify-content-center" href="https://www.wrappixel.com/" target="_blank">
+            <img src="{{asset('/assets/images/logos/logo-wrappixel.svg')}}" alt="" width="150">
+          </a>
 
-        <div class="d-none d-xl-flex align-items-center gap-3">
-          <a href="https://support.wrappixel.com/"
-            class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-            <i class="ti ti-lifebuoy fs-5"></i>
-            Support
-          </a>
-          <a href="https://www.wrappixel.com/"
-            class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-            <i class="ti ti-gift fs-5"></i>
-            Templates
-          </a>
-          <a href="https://www.wrappixel.com/hire-us/"
-            class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-            <i class="ti ti-briefcase fs-5"></i>
-            Hire Us
-          </a>
+          <div class="d-none d-xl-flex align-items-center gap-3">
+            <a href="https://support.wrappixel.com/"
+              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
+              <i class="ti ti-lifebuoy fs-5"></i>
+              Support
+            </a>
+            <a href="https://www.wrappixel.com/"
+              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
+              <i class="ti ti-gift fs-5"></i>
+              Templates
+            </a>
+            <a href="https://www.wrappixel.com/hire-us/"
+              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
+              <i class="ti ti-briefcase fs-5"></i>
+              Hire Us
+            </a>
+          </div>
         </div>
-      </div>
 
       <div class="d-lg-flex align-items-center gap-2">
         <h3 class="text-white mb-2 mb-lg-0 fs-5 text-center">WELCOME</h3>
@@ -65,7 +65,7 @@
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.html" class="text-nowrap logo-img">
-            <img src="../assets/images/logos/logo.svg" alt="" />
+            <img src="{{asset('/assets/images/logos/logo.svg')}}" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -92,35 +92,41 @@
             
             
 
-            
             <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="./ui-typography.html" aria-expanded="false">
-                <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
-                <span class="hide-menu">Typography</span>
+              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <iconify-icon icon="solar:atom-line-duotone"></iconify-icon>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <iconify-icon icon="solar:accessibility-line-duotone" class=""></iconify-icon>
+                <span class="hide-menu">Pelanggan</span>
               </a>
             </li>
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="./ui-typography.html" aria-expanded="false">
-                <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
-                <span class="hide-menu">Typography</span>
+              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <iconify-icon icon="solar:cart-3-line-duotone"></iconify-icon>
+                <span class="hide-menu">Produk</span>
               </a>
             </li>
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="./ui-typography.html" aria-expanded="false">
-                <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
-                <span class="hide-menu">Typography</span>
+              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <iconify-icon icon="solar:document-text-line-duotone" class=""></iconify-icon>
+                <span class="hide-menu">Pesanan</span>
               </a>
             </li>
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="./ui-typography.html" aria-expanded="false">
-                <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
-                <span class="hide-menu">Typography</span>
+              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <iconify-icon icon="solar:dollar-line-duotone" class=""></iconify-icon>
+                <span class="hide-menu">Pembayaran</span>
               </a>
             </li>
 
@@ -169,12 +175,12 @@
               </ul>
               <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                 <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                  <a href="https://www.wrappixel.com/templates/spike-bootstrap-admin-dashboard/?ref=376" target="_blank"
-                    class="btn btn-primary">Hi Admin!</a>
+                  {{-- <a href="https://www.wrappixel.com/templates/spike-bootstrap-admin-dashboard/?ref=376" target="_blank"
+                    class="btn btn-primary">Hi Admin!</a> --}}
                   <li class="nav-item dropdown">
                     <a class="nav-link " href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                       aria-expanded="false">
-                      <img src="../assets/images/profile/user1.jpg" alt="" width="35" height="35"
+                      <img src="{{asset('/assets/images/profile/user1.jpg')}}" alt="" width="35" height="35"
                         class="rounded-circle">
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
@@ -209,43 +215,18 @@
             </nav>
           </header>
           <!--  Header End -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">Headings</h5>
-              <div class="card">
-                <div class="card-body p-4">
-                  <h1>h1. Bootstrap heading</h1>
-                  <h2>h2. Bootstrap heading</h2>
-                  <h3>h3. Bootstrap heading</h3>
-                  <h4>h4. Bootstrap heading</h4>
-                  <h5>h5. Bootstrap heading</h5>
-                  <h6>h6. Bootstrap heading</h6>
-                </div>
-              </div>
-              <h5 class="card-title fw-semibold mb-4">Inline text elements</h5>
-              <div class="card mb-0">
-                <div class="card-body p-4">
-                  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-                  <p><del>This line of text is meant to be treated as deleted text.</del></p>
-                  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-                  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-                  <p><u>This line of text will render as underlined.</u></p>
-                  <p><small>This line of text is meant to be treated as fine print.</small></p>
-                  <p><strong>This line rendered as bold text.</strong></p>
-                  <p class="mb-0"><em>This line rendered as italicized text.</em></p>
-                </div>
-              </div>
-            </div>
-          </div>
+              <section>
+                @yield('content')
+              </section>
         </div>
       </div>
     </div>
   </div>
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="{{asset('/assets/libs/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{asset('/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('/assets/js/sidebarmenu.js')}}"></script>
+  <script src="{{asset('/assets/js/app.min.js')}}"></script>
+  <script src="{{asset('/assets/libs/simplebar/dist/simplebar.js')}}"></script>
   <!-- solar icons -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   {{-- <script src="{{ asset('/dist/js/demo.js')}}"></script> --}}
