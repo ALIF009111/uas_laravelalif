@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-    Data Produk
+    Data Pesanan
 @endsection
 
 @section('content')
