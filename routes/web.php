@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pelangganController;
+use App\Http\Controllers\pesananController;
 use App\Http\Controllers\produkController;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,6 +36,9 @@ Auth::routes();
     Route::get('/produk/edit/{id}', [produkController::class, 'edit'])->name('produk.edit');
     Route::put('/produk/{id}', [produkController::class, 'update']);
     Route::delete('/produk/{id}', [produkController::class, 'destroy']);
+
+    //Pesanan
+    Route::get('/pesanan', [pesananController::class, 'index']);
 // });
 
 

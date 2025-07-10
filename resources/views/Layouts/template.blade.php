@@ -117,8 +117,8 @@
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
-                <iconify-icon icon="solar:document-text-line-duotone" class=""></iconify-icon>
+              <a class="sidebar-link primary-hover-bg" href="/pesanan" aria-expanded="false">
+                <i class="fa-regular fa-rectangle-list"></i>
                 <span class="hide-menu">Pesanan</span>
               </a>
             </li>

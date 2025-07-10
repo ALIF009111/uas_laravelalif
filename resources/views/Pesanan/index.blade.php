@@ -1,15 +1,15 @@
 @extends('layouts.template')
 
 @section('title')
-    Data Pelanggan
+    Data Produk
 @endsection
 
 @section('content')
 <div class="card mt-5"> {{-- Tambah jarak ke bawah --}}
     <div class="card-header">
         <h3 class="card-title">
-            <a href="/pelanggan/tambah" class="btn btn-primary btn-sm">
-                <i class="fa fa-user-plus"></i> Tambah Data Pelanggan
+            <a href="#" class="btn btn-primary btn-sm">
+                <i class="fa-regular fa-rectangle-list"></i> Tambah Data Pesanan
             </a>
         </h3>
     </div>
@@ -19,22 +19,31 @@
             <thead >
                 <tr>
                     <th scope="col">No</th>
+                    <th scope="col">Nama Pesanan</th>
                     <th scope="col">Nama Pelanggan</th>
-                    <th scope="col">Alamat Pelanggan</th>
-                    <th scope="col">No Hp</th>
+                    <th scope="col">Nama Produk</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Tanggal Pesanan</th>
+                    <th scope="col">Tanggal Pengambilan</th>
+                    <th scope="col">Status Pesanan</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse ($pelanggan as $data)
+                @forelse ($pesanan as $data)
                     <tr>
                         <th scope="row">{{ $nomor++ }}</th>
-                        <td>{{ $data->nm_pelanggan }}</td>
-                        <td>{{ $data->alamt_pelanggan }}</td>
-                        <td>{{ $data->noHp_pelanggan }}</td>
+                        <td>{{ $data->id_pesanan}}</td>
+                        <td>{{ $data->id_pelanggan}}</td>
+                        <td>{{ $data->id_produk}}</td>
+                        <td>{{ $data->jumlah}}</td>
+                        <td>{{ $data->total_harga}}</td>
+                        <td>{{ $data->tgl_pesanan}}</td>
+                        <td>{{ $data->tgl_pengambilan}}</td>
+                        <td>{{ $data->status_pemesanan}}</td>
                         <td>
 
-                           <a href="/pelanggan/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                           <a href="#{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
                             <!-- Button trigger modal -->
@@ -51,11 +60,11 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Yakin ingin menghapus Pelanggan <strong>{{ $data->nm_pelanggan }}</strong>?
+                                            Yakin ingin menghapus Produk <strong>{{ $data->nm_produk }}</strong>?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <form action="/pelanggan/{{ $data->id }}" method="POST" class="d-inline">
+                                            <form action="/produk/{{ $data->id }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Hapus</button>
