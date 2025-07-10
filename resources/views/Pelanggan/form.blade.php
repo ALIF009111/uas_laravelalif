@@ -8,8 +8,8 @@
                 <div class="card-header">Form Tambah Pelanggan</div>
 
                 <div class="card-body">
-                    <form method="post" action="/pelanggan">
-                        @csrf
+                    <form method="post" action="/pelanggan" enctype="multipart/form-data">
+                     @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Pelanggan</label>
                             <input type="text" name="nm_pelanggan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

@@ -102,7 +102,7 @@
 
             <li class="sidebar-item">
               <a class="sidebar-link primary-hover-bg" href="/pelanggan" aria-expanded="false">
-                <iconify-icon icon="solar:accessibility-line-duotone" class=""></iconify-icon>
+                <iconify-icon icon="solar:accessibility-line-duotone"></iconify-icon>
                 <span class="hide-menu">Pelanggan</span>
               </a>
             </li>
@@ -207,6 +207,8 @@
 
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
+
+        </form>
 
                       </div>
                     </div>

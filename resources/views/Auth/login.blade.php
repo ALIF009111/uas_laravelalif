@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spike Free Bootstrap Admin Template by WrapPixel</title>
+  <title>Login</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('/assets/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('/assets/css/styles.min.css')}}" />
 </head>
@@ -25,9 +25,10 @@
                 </a>
                 <p class="text-center">Selamat Datang Admin Silahkan Login</p>
                 <form method="POST" action="{{ route('login') }}">
+                    @csrf
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"> Username </label>
-                             @csrf
+                            
                     <div class="input-group mb-3">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 

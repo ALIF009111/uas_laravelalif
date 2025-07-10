@@ -39,8 +39,13 @@ class pelangganController extends Controller
         $pelanggan->noHp_pelanggan = $request->noHp_pelanggan;
         $pelanggan->save();
 
-        return redirect('/Pelanggan');
+        return redirect('/pelanggan');
     }
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Display the specified resource.
