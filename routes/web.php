@@ -30,6 +30,11 @@ Auth::routes();
 
     //Produk
     Route::get('/produk', [produkController::class, 'index']);
+    Route::get('/produk/tambah', [produkController::class, 'create']);
+    Route::post('/produk', [produkController::class, 'store']);
+    Route::get('/produk/edit/{id}', [produkController::class, 'edit'])->name('produk.edit');
+    Route::put('/produk/{id}', [produkController::class, 'update']);
+    Route::delete('/produk/{id}', [produkController::class, 'destroy']);
 // });
 
 

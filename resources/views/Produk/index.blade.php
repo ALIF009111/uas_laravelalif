@@ -34,7 +34,7 @@
                         <td>{{ $data->stok }}</td>
                         <td>
 
-                           <a href="#{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                           <a href="/produk/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
                             <!-- Button trigger modal -->
@@ -51,7 +51,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Yakin ingin menghapus Pelanggan <strong>{{ $data->nm_pelanggan }}</strong>?
+                                            Yakin ingin menghapus Produk <strong>{{ $data->nm_produk }}</strong>?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
