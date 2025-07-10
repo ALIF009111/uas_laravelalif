@@ -109,7 +109,7 @@
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+              <a class="sidebar-link primary-hover-bg" href="/produk" aria-expanded="false">
                 <iconify-icon icon="solar:cart-3-line-duotone"></iconify-icon>
                 <span class="hide-menu">Produk</span>
               </a>
