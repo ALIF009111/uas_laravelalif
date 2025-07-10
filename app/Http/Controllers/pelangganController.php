@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pelanggan;
+use App\Models\pelanggan;
 use Illuminate\Http\Request;
 
 class pelangganController extends Controller
@@ -39,7 +39,7 @@ class pelangganController extends Controller
         $pelanggan->noHp_pelanggan = $request->noHp_pelanggan;
         $pelanggan->save();
 
-        return redirect('/pelanggan');
+        return redirect('/Pelanggan');
     }
 
     /**

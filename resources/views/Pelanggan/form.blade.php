@@ -8,7 +8,7 @@
                 <div class="card-header">Form Tambah Pelanggan</div>
 
                 <div class="card-body">
-                    <form method="post" action="/pelanggan" enctype="multipart/form-data">
+                    <form method="post" action="/pelanggan">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Pelanggan</label>
