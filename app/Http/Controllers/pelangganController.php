@@ -42,10 +42,6 @@ class pelangganController extends Controller
         return redirect('/pelanggan');
     }
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
 
     /**
      * Display the specified resource.
@@ -61,6 +57,8 @@ class pelangganController extends Controller
     public function edit(string $id)
     {
         //
+        $pelanggan = pelanggan::find($id);
+        return view('Pelanggan.edit',compact('pelanggan'));
     }
 
     /**
@@ -69,6 +67,13 @@ class pelangganController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $pelanggan = Pelanggan::find($id);
+        $pelanggan->nm_pelanggan = $request->nm_pelanggan;
+        $pelanggan->alamt_pelanggan = $request->alamt_pelanggan;
+        $pelanggan->noHp_pelanggan = $request->noHp_pelanggan;
+        $pelanggan->save();
+
+        return redirect('/pelanggan');
     }
 
     /**
@@ -77,5 +82,9 @@ class pelangganController extends Controller
     public function destroy(string $id)
     {
         //
+        $pelanggan = Pelanggan::find($id);
+        $pelanggan->delete();
+
+        return redirect('/pelanggan');
     }
 }

@@ -200,16 +200,13 @@
                         </a>
 
                          <a class="nav-link" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-        </a>
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-
-        </form>
-
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                       </div>
                     </div>
                   </li>

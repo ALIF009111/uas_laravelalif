@@ -34,7 +34,7 @@
                         <td>{{ $data->noHp_pelanggan }}</td>
                         <td>
 
-                           <a href="#{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                           <a href="/pelanggan/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
                             <!-- Button trigger modal -->
@@ -51,11 +51,11 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Yakin ingin menghapus buku berjudul <strong>{{ $data->judul }}</strong>?
+                                            Yakin ingin menghapus Pelanggan <strong>{{ $data->nm_pelanggan }}</strong>?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <form action="/perpus/{{ $data->id }}" method="POST" class="d-inline">
+                                            <form action="/pelanggan/{{ $data->id }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Hapus</button>
