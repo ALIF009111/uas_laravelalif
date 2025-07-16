@@ -125,7 +125,7 @@
 
 
              <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+              <a class="sidebar-link primary-hover-bg" href="/pembayaran" aria-expanded="false">
                 <iconify-icon icon="solar:dollar-line-duotone" class=""></iconify-icon>
                 <span class="hide-menu">Pembayaran</span>
               </a>

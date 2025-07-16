@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pelangganController;
 use App\Http\Controllers\pesananController;
 use App\Http\Controllers\produkController;
+use App\Http\Controllers\pembayaranController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -17,8 +18,8 @@ Auth::routes();
         return view('home');
     });
 
-    Route::get('/template', function () {
-        return view('layouts.template');
+    Route::get('/t', function () {
+        return view('Pembayaran.edit');
     });
 
     // Pelanggan
@@ -44,6 +45,14 @@ Auth::routes();
     Route::get('/pesanan/edit/{id}', [pesananController::class, 'edit']);
     Route::put('/pesanan/{id}', [pesananController::class, 'update']);
     Route::delete('/pesanan/{id}', [pesananController::class, 'destroy']);
+
+    //Pembayaran
+    Route::get('/pembayaran', [pembayaranController::class, 'index']);
+    Route::get('/pembayaran/tambah', [pembayaranController::class, 'create']);
+    Route::post('/pembayaran', [pembayaranController::class, 'store']);
+    Route::get('/pembayaran/edit/{id}', [pembayaranController::class, 'edit']);
+    Route::put('/pembayaran/{id}', [pembayaranController::class, 'update']);
+    Route::delete('/pembayaran/{id}', [pembayaranController::class, 'destroy']);
 // });
 
 

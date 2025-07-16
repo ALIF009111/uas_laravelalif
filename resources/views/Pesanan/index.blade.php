@@ -35,7 +35,7 @@
                     <tr>
                         <th scope="row">{{ $nomor++ }}</th>
                         <td>{{ $data->nm_pesanan}}</td>
-                        <td>{{ $data->pelanggans->nm_pelanggan}}</td>
+                        <td>{{ $data->pesanans ? $data->pesanans->nm_pesanan : '-' }}</td>
                         <td>{{ $data->produks->nm_produk}}</td>
                         <td>{{ $data->jumlah}}</td>
                         <td>{{ $data->total_harga}}</td>
