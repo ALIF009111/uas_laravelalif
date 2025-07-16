@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
-            $table->string('id_pesanan');
-            $table->bigInteger('id_pelanggan');
-            $table->bigInteger('id_produk');
+            $table->string('nm_pesanan');
+            $table->bigInteger('pelanggans_id');
+            $table->bigInteger('produks_id');
             $table->integer('jumlah');
             $table->string('total_harga');
             $table->date('tgl_pesanan');

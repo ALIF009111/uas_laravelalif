@@ -23,6 +23,7 @@
                     <th scope="col">Nama Pelanggan</th>
                     <th scope="col">Nama Produk</th>
                     <th scope="col">Jumlah</th>
+                    <th scope="col">Total Harga</th>
                     <th scope="col">Tanggal Pesanan</th>
                     <th scope="col">Tanggal Pengambilan</th>
                     <th scope="col">Status Pesanan</th>
@@ -33,9 +34,9 @@
                 @forelse ($pesanan as $data)
                     <tr>
                         <th scope="row">{{ $nomor++ }}</th>
-                        <td>{{ $data->id_pesanan}}</td>
-                        <td>{{ $data->id_pelanggan}}</td>
-                        <td>{{ $data->id_produk}}</td>
+                        <td>{{ $data->nm_pesanan}}</td>
+                        <td>{{ $data->pelanggans->nm_pelanggan}}</td>
+                        <td>{{ $data->produks->nm_produk}}</td>
                         <td>{{ $data->jumlah}}</td>
                         <td>{{ $data->total_harga}}</td>
                         <td>{{ $data->tgl_pesanan}}</td>
@@ -43,7 +44,7 @@
                         <td>{{ $data->status_pemesanan}}</td>
                         <td>
 
-                           <a href="#{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                           <a href="/pesanan/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
                             <!-- Button trigger modal -->
@@ -60,11 +61,12 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Yakin ingin menghapus Produk <strong>{{ $data->nm_produk }}</strong>?
+                                            Yakin ingin menghapus Pesanan <strong>{{ $data->nm_pesanan
+                                             }}</strong>?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <form action="/produk/{{ $data->id }}" method="POST" class="d-inline">
+                                            <form action="/pesanan/{{ $data->id }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Hapus</button>

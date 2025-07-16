@@ -41,6 +41,9 @@ Auth::routes();
     Route::get('/pesanan', [pesananController::class, 'index']);
     Route::get('/pesanan/tambah', [pesananController::class, 'create']);
     Route::post('/pesanan', [pesananController::class, 'store']);
+    Route::get('/pesanan/edit/{id}', [pesananController::class, 'edit']);
+    Route::put('/pesanan/{id}', [pesananController::class, 'update']);
+    Route::delete('/pesanan/{id}', [pesananController::class, 'destroy']);
 // });
 
 

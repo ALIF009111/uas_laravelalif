@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pesanan;
+use App\Models\Pesanan;
+use App\Models\Pelanggan;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class pesananController extends Controller
@@ -24,7 +26,10 @@ class pesananController extends Controller
     public function create()
     {
         //
-        return view('Pesanan.form');
+        $pesanan = Pesanan::all();
+        $pelanggan = Pelanggan::all();
+        $produk = Produk::all();
+        return view('Pesanan.form',compact('pesanan','pelanggan','produk'));
     }
 
     /**
@@ -34,14 +39,14 @@ class pesananController extends Controller
     {
         //
         $pesanan = new Pesanan();
-        $pesanan->id_pesanan = $request->id_pesanan;
-        $pesanan->id_pelanggan = $request->id_pelanggan;
-        $pesanan->id_produk = $request->id_produk;
+        $pesanan->nm_pesanan = $request->nm_pesanan;
+        $pesanan->pelanggans_id = $request->pelanggan;
+        $pesanan->produks_id = $request->produk;
         $pesanan->jumlah = $request->jumlah;
         $pesanan->total_harga = $request->total_harga;
         $pesanan->tgl_pesanan = $request->tgl_pesanan;
         $pesanan->tgl_pengambilan = $request->tgl_pengambilan;
-        $pesanan->status_pemesanan = $request->status_Pemesanan;
+        $pesanan->status_pemesanan = $request->status_pemesanan;
         $pesanan->save();
 
         return redirect('/pesanan');
@@ -61,6 +66,10 @@ class pesananController extends Controller
     public function edit(string $id)
     {
         //
+        $pesanan = Pesanan::findOrFail($id);
+        $pelanggan = Pelanggan::all();
+        $produk = Produk::all();
+        return view('Pesanan.edit',compact('pesanan','pelanggan','produk'));
     }
 
     /**
@@ -69,6 +78,18 @@ class pesananController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $pesanan = Pesanan::findOrFail($id);
+        $pesanan->nm_pesanan = $request->nm_pesanan;
+        $pesanan->pelanggans_id = $request->pelanggan;
+        $pesanan->produks_id = $request->produk;
+        $pesanan->jumlah = $request->jumlah;
+        $pesanan->total_harga = $request->total_harga;
+        $pesanan->tgl_pesanan = $request->tgl_pesanan;
+        $pesanan->tgl_pengambilan = $request->tgl_pengambilan;
+        $pesanan->status_pemesanan = $request->status_pemesanan;
+        $pesanan->save();
+
+        return redirect('/pesanan');
     }
 
     /**
@@ -77,5 +98,9 @@ class pesananController extends Controller
     public function destroy(string $id)
     {
         //
+        $pesanan = Pesanan::find($id);
+        $pesanan->delete();
+
+        return redirect('/pesanan');
     }
 }
