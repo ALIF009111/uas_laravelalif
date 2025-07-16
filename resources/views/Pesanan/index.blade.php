@@ -8,7 +8,7 @@
 <div class="card mt-5"> {{-- Tambah jarak ke bawah --}}
     <div class="card-header">
         <h3 class="card-title">
-            <a href="#" class="btn btn-primary btn-sm">
+            <a href="pesanan/tambah" class="btn btn-primary btn-sm">
                 <i class="fa-regular fa-rectangle-list"></i> Tambah Data Pesanan
             </a>
         </h3>

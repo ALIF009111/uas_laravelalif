@@ -39,6 +39,8 @@ Auth::routes();
 
     //Pesanan
     Route::get('/pesanan', [pesananController::class, 'index']);
+    Route::get('/pesanan/tambah', [pesananController::class, 'create']);
+    Route::post('/pesanan', [pesananController::class, 'store']);
 // });
 
 

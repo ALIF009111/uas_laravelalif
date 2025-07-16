@@ -14,7 +14,7 @@ class pesananController extends Controller
     {
         //
         $nomor = 1;
-        $pesanan = pesanan::all();
+        $pesanan = Pesanan::all();
         return view('Pesanan.index', compact('pesanan','nomor'));
     }
 
@@ -24,6 +24,7 @@ class pesananController extends Controller
     public function create()
     {
         //
+        return view('Pesanan.form');
     }
 
     /**
@@ -32,6 +33,18 @@ class pesananController extends Controller
     public function store(Request $request)
     {
         //
+        $pesanan = new Pesanan();
+        $pesanan->id_pesanan = $request->id_pesanan;
+        $pesanan->id_pelanggan = $request->id_pelanggan;
+        $pesanan->id_produk = $request->id_produk;
+        $pesanan->jumlah = $request->jumlah;
+        $pesanan->total_harga = $request->total_harga;
+        $pesanan->tgl_pesanan = $request->tgl_pesanan;
+        $pesanan->tgl_pengambilan = $request->tgl_pengambilan;
+        $pesanan->status_pemesanan = $request->status_Pemesanan;
+        $pesanan->save();
+
+        return redirect('/pesanan');
     }
 
     /**
