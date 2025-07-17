@@ -23,21 +23,7 @@
           </a>
 
           <div class="d-none d-xl-flex align-items-center gap-3">
-            <a href="https://support.wrappixel.com/"
-              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-              <i class="ti ti-lifebuoy fs-5"></i>
-              Support
-            </a>
-            <a href="https://www.wrappixel.com/"
-              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-              <i class="ti ti-gift fs-5"></i>
-              Templates
-            </a>
-            <a href="https://www.wrappixel.com/hire-us/"
-              class="btn btn-outline-primary d-flex align-items-center gap-1 border-0 text-white px-6">
-              <i class="ti ti-briefcase fs-5"></i>
-              Hire Us
-            </a>
+            
           </div>
         </div>
 
@@ -94,7 +80,7 @@
             
 
             <li class="sidebar-item">
-              <a class="sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+              <a class="sidebar-link primary-hover-bg" href="/home" aria-expanded="false">
                 <iconify-icon icon="solar:atom-line-duotone"></iconify-icon>
                 <span class="hide-menu">Dashboard</span>
               </a>

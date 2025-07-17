@@ -6,6 +6,7 @@ use App\Http\Controllers\pesananController;
 use App\Http\Controllers\produkController;
 use App\Http\Controllers\pembayaranController;
 use Illuminate\Support\Facades\Auth;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Auth::routes();
 
